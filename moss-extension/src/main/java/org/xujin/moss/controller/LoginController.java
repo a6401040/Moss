@@ -28,7 +28,7 @@ public class LoginController {
                 throw new AuthenticationException();
             }
             String token= JwtUtil.createToken(username);
-            Date tokenExpired = new Date(new Date().getTime() + JwtUtil.EXPIRE_TIME);
+            Date tokenExpired = new Date(System.currentTimeMillis() + JwtUtil.EXPIRE_TIME);
             JwtToken jwtToken = new JwtToken(token);
             Subject subject = SecurityUtils.getSubject();
             subject.login(jwtToken);

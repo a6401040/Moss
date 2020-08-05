@@ -14,11 +14,11 @@ services:
       - ./data/mysql:/var/lib/mysql
     environment:
       TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_ROOT_PASSWORD: abcd1234
 
   #Moss管理中心
   moss:
-    image: xujin/moss-web:latest
+    image: kylinzhang/moss-web:latest
     container_name: moss
     restart: always
     networks:
@@ -28,8 +28,8 @@ services:
     env_file: .env
     environment:
       TZ: Asia/Shanghai
-    depends_on:
-      - moss-db
+    #depends_on:
+     # - moss-db
 
 networks:
   sc-net:

@@ -20,6 +20,6 @@ public class Swagger2Config {
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("服务治理平台").description("统一的服务服务治理平台测试")
-                .contact("Software_King@qq.com").version("2.0").build();
+                .contact("axiao_zhang@126.com").version("2.0").build();
     }
 }

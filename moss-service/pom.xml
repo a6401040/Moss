@@ -21,9 +21,6 @@
                 <version>1.0.0.RELEASE</version>
                 </dependency>
             </dependencies>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
         </profile>
         <profile>
             <id>zookeeper</id>
@@ -58,6 +55,9 @@
                     <version>1.0.0.RELEASE</version>
                 </dependency>
             </dependencies>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
     </profiles>
     <dependencies>
@@ -75,7 +75,7 @@
         <dependency>
             <groupId>ma.glasnost.orika</groupId>
             <artifactId>orika-core</artifactId>
-            <version>1.5.0</version>
+            <version>1.5.4</version>
             <optional>true</optional>
         </dependency>
 
@@ -104,7 +104,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.54</version>
+            <version>1.2.70</version>
         </dependency>
 
         <dependency>

@@ -21,13 +21,19 @@
     </properties>
     <profiles>
         <profile>
-            <id>eureka</id>
+            <id>nacos</id>
             <properties>
-                <discovery.type>eureka</discovery.type>
+                <discovery.type>nacos</discovery.type>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+        </profile>
+        <profile>
+            <id>eureka</id>
+            <properties>
+                <discovery.type>eureka</discovery.type>
+            </properties>
         </profile>
         <profile>
             <id>zookeeper</id>
@@ -53,12 +59,17 @@
             <groupId>com.github.ulisesbocchio</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.1.11.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-            <version>6.0.6</version>
+            <version>8.0.18</version>
+<!--            <version>6.0.6</version>-->
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -131,8 +142,10 @@
                 <version>1.2.0</version>
                 <configuration>
                     <!-- 注意imageName一定要是符合正则[a-z0-9-_.]的，否则构建不会成功 -->
-                    <imageName>xujin/${project.artifactId}</imageName>
+                    <imageName>kylinzhang/${project.artifactId}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <!--指定远程 docker api地址-->
+                    <dockerHost>http://192.168.184.140:2375</dockerHost>
                     <rm>true</rm>
                     <resources>
                         <resource>

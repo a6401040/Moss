@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://${DATASOURCE_HOST:localhost}:${DATASOURCE_PORT:3306}/moss?useUnicode=true&characterEncoding=utf8&useSSL=false
-    username: ${DATASOURCE_USERNAME:root}
-    password: ${DATASOURCE_PASSWORD:root123}
+    url: jdbc:mysql://${DATASOURCE_HOST:192.168.184.129}:${DATASOURCE_PORT:3306}/moss?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ${DATASOURCE_USERNAME:zql}
+    password: ${DATASOURCE_PASSWORD:abcd1234}
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat

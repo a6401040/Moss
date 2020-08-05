@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: ${MOSS_DB_TYPE:h2}, @discovery.type@
+    active: ${MOSS_DB_TYPE:mysql}, @discovery.type@
   application:
     name: halo-moss
   boot:
@@ -39,7 +39,7 @@ server:
 management.endpoints.health.show-details: true
 
 ### 替换成自己的skywalking URL
-moss.skywalking.url: http://${MOSS_SKYWALKING_HOST:localhost}:${MOSS_SKYWALKING_PORT:8083}/
+moss.skywalking.url: http://${MOSS_SKYWALKING_HOST:192.168.184.140}:${MOSS_SKYWALKING_PORT:8083}/
 
 logging:
   moss:
